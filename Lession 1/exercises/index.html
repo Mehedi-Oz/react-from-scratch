@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lession 01: Exercises</title>
+</head>
+
+<body>
+
+  <!-- Add a container for React -->
+  <div class="one_a"></div>
+  <div class="one_b"></div>
+  <div class="one_c"></div>
+  <div class="one_d"></div>
+  <div class="one_e"></div>
+  <div class="one_f"></div>
+  <div class="one_g"></div>
+  <div class="one_h"></div>
+  <div class="one_i"></div>
+  <div class="one_j"></div>
+
+  <!-- scripts -->
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+  <!-- one_a -->
+  <script type="text/babel">
+
+    const div_1a = (
+      <div>
+        <p>Lession 01: Exercises</p>
+        <img src="assets/exercise_image_1.png" alt="exercise_image_1" style={{ height: '400px', width: '500px' }} />
+        <hr />
+        <p>Problem one_a</p>
+        <button>Good Job!</button>
+      </div>
+    );
+
+    const cont_1a = document.querySelector('.one_a');
+    ReactDOM.createRoot(cont_1a).render(div_1a);
+  </script>
+
+  <!-- one_b -->
+  <script type="text/babel">
+    const Name = "Hasan";
+
+    const div_1b = (
+      <div>
+        <hr />
+        <p>Problem one_b</p>
+        <p>My name is {Name}</p>
+      </div>
+    );
+
+    const cont_1b = document.querySelector('.one_b');
+    ReactDOM.createRoot(cont_1b).render(div_1b);
+  </script>
+
+  <!-- one_c -->
+  <script type="text/babel">
+    let price = 10;
+
+    const div_1c = (
+      <div>
+        <hr />
+        <p>Problem one_c</p>
+        <p>Cotton Socks</p>
+        <p>Price: ${price}</p>
+        <button>Add to Cart</button>
+      </div>
+    );
+
+    const cont_1c = document.querySelector('.one_c');
+    ReactDOM.createRoot(cont_1c).render(div_1c);
+  </script>
+
+  <!-- one_d -->
+  <script type="text/babel">
+    let one_pack_scoks_price = 10;
+    let tshirt_price = 8;
+    let productCost = one_pack_scoks_price + (2 * tshirt_price);
+    console.log(productCost);
+    const div_1d = (
+      <div>
+        <hr />
+        <p>Problem one_d</p>
+        <img src="assets/exercise_image_2.png" alt="exercise_image_2" style={{ height: '400px', width: '500px' }} />
+        <p>Check console for product cost</p>
+      </div>
+    );
+
+    const cont_1d = document.querySelector('.one_d');
+    ReactDOM.createRoot(cont_1d).render(div_1d);
+  </script>
+
+  <!-- one_e -->
+  <script type="text/babel">
+
+    const div_1e = (
+      <div>
+        <hr />
+        <p>Problem one_e</p>
+        <p>Product cost: ${productCost}</p>
+      </div>
+    );
+
+    const cont_1e = document.querySelector('.one_e');
+    ReactDOM.createRoot(cont_1e).render(div_1e);
+  </script>
+
+  <!-- one_f -->
+  <script type="text/babel">
+    let shipping_cost = 5;
+
+    const div_1f = (
+      <div>
+        <hr />
+        <p>Problem one_f</p>
+        <img src="assets/exercise_image_3.png" alt="exercise_image_3" style={{ height: '400px', width: '500px' }} />
+        <p>Product cost: ${productCost}</p>
+        <p>Shipping cost: ${shipping_cost}</p>
+        <p>Total cost: ${productCost + shipping_cost}</p>
+        <button>Place your order</button>
+      </div>
+    );
+
+    const cont_1f = document.querySelector('.one_f');
+    ReactDOM.createRoot(cont_1f).render(div_1f);
+  </script>
+
+  <!-- one_g -->
+  <script type="text/babel">
+    console.log(dayjs().format('MMMM D'));
+    const div_1g = (
+      <div>
+        <hr />
+        <p>Problem one_g</p>
+        <img src="assets/exercise_image_4.png" alt="exercise_image_4" style={{ height: '400px', width: '500px' }} />
+        <p>Check console for date</p>
+      </div>
+    );
+
+    const cont_1g = document.querySelector('.one_g');
+    ReactDOM.createRoot(cont_1g).render(div_1g);
+  </script>
+
+  <!-- one_h -->
+  <script type="text/babel">
+
+    const div_1h = (
+      <div>
+        <hr />
+        <p>Problem one_h</p>
+        <p>Today is {dayjs().format('MMMM D')}</p>
+      </div>
+    );
+
+    const cont_1h = document.querySelector('.one_h');
+    ReactDOM.createRoot(cont_1h).render(div_1h);
+  </script>
+
+  <!-- one_i -->
+  <script type="text/babel">
+
+    const div_1i = (
+      <div>
+        <hr />
+        <p>Problem one_i</p>
+        <img src="assets/exercise_image_5.png" alt="exercise_image_5" style={{ height: '400px', width: '500px' }} />
+        <p>Current Time: {dayjs().format('HH:mm:ss')}</p>
+      </div>
+    );
+
+    const cont_1i = document.querySelector('.one_i');
+    ReactDOM.createRoot(cont_1i).render(div_1i);
+  </script>
+
+  <!-- one_j -->
+  <script type="text/babel">
+    const cont_1j = document.querySelector('.one_j');
+    const root_1j = ReactDOM.createRoot(cont_1j);
+
+    setInterval(() => {
+      const div_1j = (
+        <div>
+          <hr />
+          <p>Problem one_i</p>
+          <p>Current Time: {dayjs().format('HH:mm:ss')}</p>
+        </div>
+      );
+      root_1j.render(div_1j);
+    }, 1000);
+
+  </script>
+
+</body>
+
+</html>
