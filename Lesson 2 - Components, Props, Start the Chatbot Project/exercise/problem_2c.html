@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 - Problem 2c</title>
+
+  <!-- scripts -->
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+</head>
+
+<body>
+
+  <div class="problem_2c"></div>
+
+  <script type="text/babel">
+    function App() {
+      return (
+        <>
+          <h2>Lesson 2 - Problem 2c</h2>
+          <img src="/assets/problem_2.png" alt="" width="700px" />
+          <hr />
+          <p>Hello, welcome to my website</p>
+          <div>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div>
+            <input type="password" placeholder="Password" />
+          </div>
+
+          <button>Login</button>
+          <button>Sign Up</button>
+        </>
+      );
+    }
+
+    const container = document.querySelector('.problem_2c');
+    ReactDOM.createRoot(container).render(<App />)
+  </script>
+
+</body>
+
+</html>

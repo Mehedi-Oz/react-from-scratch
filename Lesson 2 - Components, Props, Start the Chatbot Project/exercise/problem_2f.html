@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 - Problem 2f</title>
+
+  <!-- scripts -->
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+</head>
+
+<body>
+
+  <div class="problem_2f"></div>
+
+  <script type="text/babel">
+
+    function ProductDetails({ product, price }) {
+      return (
+        <>
+          <p>{product}</p>
+          <p>Price: ${price}</p>
+          <button>Add to Cart</button>
+        </>
+      );
+    }
+
+    function App() {
+      return (
+        <>
+          <p>Lesson 2 - Problem 2f</p>
+          <img src="/assets/problem_3.png" width="700px" />
+          <hr />
+          <ProductDetails product="Tennis Balls" price="6.00" />
+          <ProductDetails product="Plain T-Shirt" price="7.99" />
+        </>
+      );
+    }
+
+    const container = document.querySelector('.problem_2f');
+    ReactDOM.createRoot(container).render(<App />);
+  </script>
+
+</body>
+
+</html>

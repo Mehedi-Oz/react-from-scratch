@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 - Problem 2a</title>
+
+  <!-- scripts -->
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+</head>
+
+<body>
+
+  <div class="problem_2a"></div>
+
+  <script type="text/babel">
+
+    function App() {
+      return (
+        <div>
+          <p>Lesson 2 - Problem 2a</p>
+          <img src="/assets/problem_1.png" alt="" width="400px" />
+          <hr />
+          <p>Hello, welcome to my website.</p>
+        </div>
+      );
+    }
+
+    const container = document.querySelector('.problem_2a');
+    ReactDOM.createRoot(container).render(<App />)
+
+  </script>
+
+</body>
+
+</html>
