@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 - Problem 2j</title>
+
+  <!-- scripts -->
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+</head>
+
+<body>
+
+  <div class="problem_2j"></div>
+
+  <script type="text/babel">
+
+    function ProductDetails({ product, price, discountPrice, product_image }) {
+      return (
+        <>
+          <p>{product}</p>
+          <img src={product_image} alt="{prodcut_image}" width="50px" />
+          {!discountPrice && (<p>Price: ${price}</p>)}
+          {discountPrice && (<del>Price: ${price}</del>)}
+          {discountPrice && (<p>Discounted Price: ${discountPrice}</p>)}
+          <button>Add to Cart</button>
+        </>
+      );
+    }
+
+    function App() {
+      return (
+        <>
+          <p>Lesson 2 - Problem 2j</p>
+          <img src="/assets/problem_5.png" width="500px" />
+          <hr />
+          <ProductDetails product="Tennis Balls" price="6.00" product_image="assets/tennis-balls.png" />
+          <ProductDetails product="Plain T-Shirt" price="7.99" product_image="assets/plain-t-shirt.png" />
+          <ProductDetails product="Cotton Socks" price="10.90" discountPrice="5.45" product_image="assets/cotton-socks.png" />
+        </>
+      );
+    }
+
+    const container = document.querySelector('.problem_2j');
+    ReactDOM.createRoot(container).render(<App />);
+  </script>
+
+</body>
+
+</html>

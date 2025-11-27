@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson 2 - Problem 2g</title>
+  <title>Lesson 2 - Problem 2h</title>
 
   <!-- scripts -->
   <script src="https://unpkg.com/supersimpledev/react.js"></script>
@@ -14,7 +14,7 @@
 
 <body>
 
-  <div class="problem_2g"></div>
+  <div class="problem_2h"></div>
 
   <script type="text/babel">
 
@@ -22,7 +22,8 @@
       return (
         <>
           <p>{product}</p>
-          <p>Price: ${price}</p>
+          {!discountPrice && (<p>Price: ${price}</p>)}
+          {discountPrice && (<del>Price: ${price}</del>)}
           {discountPrice && (<p>Discounted Price: ${discountPrice}</p>)}
           <button>Add to Cart</button>
         </>
@@ -32,17 +33,17 @@
     function App() {
       return (
         <>
-          <p>Lesson 2 - Problem 2g</p>
+          <p>Lesson 2 - Problem 2h</p>
           <img src="/assets/problem_4.png" width="500px" />
           <hr />
           <ProductDetails product="Tennis Balls" price="6.00" />
-          <ProductDetails product="Plain T-Shirt" price="7.99"/>
+          <ProductDetails product="Plain T-Shirt" price="7.99" />
           <ProductDetails product="Cotton Socks" price="10.90" discountPrice="5.45" />
         </>
       );
     }
 
-    const container = document.querySelector('.problem_2g');
+    const container = document.querySelector('.problem_2h');
     ReactDOM.createRoot(container).render(<App />);
   </script>
 
