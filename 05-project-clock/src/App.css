@@ -1,0 +1,11 @@
+h1 {
+  font-weight: 700;
+}
+
+.clock-container{
+  text-align: center;
+}
+
+.custom-row{
+  margin: 10px;
+}
